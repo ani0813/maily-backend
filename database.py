@@ -1,8 +1,11 @@
 import pymongo
+import os
 
 
-MONGO_URI =  "mongodb+srv://aniguloyan13:jyU6uKH4KMlYlltW@color-names.zo4ftse.mongodb.net/?retryWrites=true&w=majority"
+#MONGO_URI =  "mongodb+srv://aniguloyan13:jyU6uKH4KMlYlltW@color-names.zo4ftse.mongodb.net/?retryWrites=true&w=majority"
 
+
+MONGO_URI = os.environ["MONGO_URI"]
 
 client = pymongo.MongoClient(MONGO_URI)
 
